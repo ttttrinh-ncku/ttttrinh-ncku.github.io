@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #1e293b;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }10:16 AM 4/24/202610:16 AM 4/24/2026
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .skill {
+      background: #38bdf8;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f172a;
+      color: white;
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Truong Thi Tu Trinh</h1>
+  <p>AI | Microalgae Research | Biotechnology</p>
+  <button onclick="scrollToContact()">Contact Me</button>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a researcher working on AI-driven microalgae systems for carbon capture,
+    wastewater treatment, and bioenergy production. My work integrates biotechnology,
+    machine learning, and environmental engineering.
+  </p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>AI Microalgae Bioreactor</h3>
+      <p>Optimizing algae growth using machine learning models.</p>
+    </div>
+
+    <div class="card">
+      <h3>Carbon Capture System</h3>
+      <p>Artificial algal bloom system for CO₂ sequestration.</p>
+    </div>
+
+    <div class="card">
+      <h3>Wastewater Treatment</h3>
+      <p>Using microalgae to remove pollutants and recycle nutrients.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">Microalgae Cultivation</div>
+    <div class="skill">Data Analysis</div>
+    <div class="skill">Bioreactors</div>
+    <div class="skill">AI Modeling</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: ttttrinh@kontum.udn.vn</p>
+  <p>https://www.linkedin.com/in/truong-t-tu-trinh-40635472/</p>
+</section>
+
+<footer>
+  <p>Truong Thi Tu Trinh</p>
+</footer>
+
+<script>
+  function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
