@@ -1,3 +1,39 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Website</title>
+</head>
+
+<body>
+
+  <h1>Hello, I am Truong Trinh</h1>
+  <p>This is my first website</p>
+
+  <button onclick="sayHello()">Click me</button>
+
+  <script>
+    function sayHello() {
+      alert("Welcome to my website 🚀");
+    }
+  </script>
+
+</body>
+</html>
+<style>
+  body {
+    font-family: Arial;
+    text-align: center;
+    background: #f1f5f9;
+  }
+
+  h1 {
+    color: #0f172a;
+  }
+
+  button {
+    padding: 10px;
+    background: #38bdf8;
+    border: none;
+    color: white;
+  }
+</style>
