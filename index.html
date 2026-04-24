@@ -2,98 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>Trinh Truong, PhD | Postdoctoral Research Fellow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Chart.js for graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
     }
 
     header {
-      background: #0f172a;
-      color: white;
       padding: 60px 20px;
       text-align: center;
+      border-bottom: 1px solid #ddd;
     }
 
-    header h1 {
+    h1 {
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 25px;
-      background: #1e293b;
+      gap: 20px;
       padding: 15px;
+      border-bottom: 1px solid #eee;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      font-weight: bold;
+      color: #111;
+      font-weight: 500;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
+      padding: 50px 20px;
     }
 
     h2 {
+      border-bottom: 2px solid #111;
+      padding-bottom: 5px;
       margin-bottom: 20px;
-      text-align: center;
     }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .research-item, .pub-item {
+      margin-bottom: 25px;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    .pub-title {
+      font-weight: bold;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .skill {
-      background: #38bdf8;
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background: #111;
       color: white;
-      padding: 8px 12px;
-      border-radius: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    canvas {
+      margin-top: 20px;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #0f172a;
-      color: white;
-    }
-
-    button {
-      background: #38bdf8;
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0ea5e9;
+      border-top: 1px solid #ddd;
     }
   </style>
 </head>
@@ -102,214 +88,103 @@
 
 <header>
   <h1>Trinh Truong</h1>
-  <p>AI | Microalgae Research | Biotechnology</p>
-  <button onclick="scrollToContact()">Contact Me</button>
+  <p><strong>PhD | Postdoctoral Research Fellow | NCKU</strong></p>
+  <p>AI-Driven Microalgae Systems | Carbon Capture | Wastewater Treatment</p>
+
+  <!-- CV button -->
+  <a href="CV.pdf" class="btn" download>Download CV</a>
 </header>
 
 <nav>
   <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#data">Data</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <p>
-    I am a researcher working on AI-driven microalgae systems for carbon capture,
-    wastewater treatment, and bioenergy production. My work integrates biotechnology,
-    machine learning, and environmental engineering.
+    I develop AI-controlled microalgae systems for CO₂ sequestration,
+    wastewater treatment, and sustainable bioresource production.
   </p>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-
-    <div class="card">
-      <h3>AI Microalgae Bioreactor</h3>
-      <p>Optimizing algae growth using machine learning models.</p>
-    </div>
-
-    <div class="card">
-      <h3>Carbon Capture System</h3>
-      <p>Artificial algal bloom system for CO₂ sequestration.</p>
-    </div>
-
-    <div class="card">
-      <h3>Wastewater Treatment</h3>
-      <p>Using microalgae to remove pollutants and recycle nutrients.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skill">Python</div>
-    <div class="skill">Machine Learning</div>
-    <div class="skill">Microalgae Cultivation</div>
-    <div class="skill">Data Analysis</div>
-    <div class="skill">Bioreactors</div>
-    <div class="skill">AI Modeling</div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: ttttrinh@kontum.udn.vn/z11310032@ncku.edu.tw</p>
-  <p>https://www.linkedin.com/in/truong-t-tu-trinh-40635472/</p>
-<p>https://orcid.org/my-orcid?orcid=0000-0003-3603-8679<p>
-</section>
-
-<footer>
-  <p>Truong Thi Tu-Trinh</p>
-</footer>
-
-<script>
-  function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  }
-</script>
-
-</body>
-</html>
-<section>
-  <h2>Research</h2>
-
-  <div class="research-item">
-    <h3>AI-Driven Microalgae Bioreactor Systems</h3>
-    <p>
-      Developing machine learning models to optimize microalgae growth for carbon capture
-      and wastewater treatment. Focus on multi-species interaction and adaptive control.
-    </p>
-  </div>
-
-  <div class="research-item">
-    <h3>Artificial Algal Bloom for CO₂ Sequestration</h3>
-    <p>
-      Designing a scalable system that induces controlled algal blooms using nutrient upwelling,
-      enhancing CO₂ fixation in marine environments.
-    </p>
-  </div>
-
-  <div class="research-item">
-    <h3>PFAS Removal Using Microalgae</h3>
-    <p>
-      Investigating microalgal strains capable of removing persistent pollutants (PFAS)
-      from semiconductor wastewater streams.
-    </p>
-  </div>
-
-  <div class="research-item">
-    <h3>Biochar & Bioenergy from Algal Biomass</h3>
-    <p>
-      Converting harvested microalgae biomass into biochar and hydrogen energy for
-      sustainable resource recycling.
-    </p>
-  </div>
-
-</section>
-
-#research {
-  background: #f8fafc;
-  padding: 60px 20px;
-}
-
-.research-item {
-  background: white;
-  margin: 20px auto;
-  padding: 25px;
-  max-width: 800px;
-  border-left: 5px solid #38bdf8;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.research-item h3 {
-  margin-bottom: 10px;
-  color: #0f172a;
-}
-
-.research-item ul {
-  margin-top: 10px;
-}
-
-
-<p><strong>Key Results:</strong></p>
-<ul>
-  <li>Improved biomass yield by XX%</li>
-  <li>Enhanced nitrate removal efficiency</li>
-  <li>Stable multi-species cultivation</li>
-</ul>
-<section>
-  <h2>Publications</h2>
-  <p>
-    Artificial Intelligence-Driven Microalgae Bioreactor Systems for Carbon Capture and Wastewater Treatment (In preparation)
-  </p>
-</section>
 <section id="research">
   <h2>Research</h2>
 
   <div class="research-item">
-    <h3>AI-Controlled Multi-Species Microalgae System</h3>
-    <p>
-      Developing a machine learning-driven framework to optimize species composition
-      and environmental parameters for enhanced biomass productivity and CO₂ fixation.
-    </p>
-    <ul>
-      <li>Focus: Desmodesmus sp., Chlorella sp.</li>
-      <li>Method: OD680 monitoring + AI optimization</li>
-      <li>Goal: Maximize carbon capture efficiency</li>
-    </ul>
+    <strong>AI-Controlled Microalgae Systems</strong>
+    <p>Optimizing multi-species growth using machine learning.</p>
   </div>
 
   <div class="research-item">
-    <h3>PFAS Removal from Industrial Wastewater</h3>
-    <p>
-      Investigating microalgae-based remediation strategies for removing persistent
-      organic pollutants (PFAS) in semiconductor wastewater.
-    </p>
-    <ul>
-      <li>Target: Industrial wastewater (Taiwan context)</li>
-      <li>Approach: Bioadsorption + biodegradation</li>
-    </ul>
-  </div>
-
-  <div class="research-item">
-    <h3>Artificial Algal Bloom System (Blue Hole Concept)</h3>
-    <p>
-      Designing a large-scale floating system that utilizes nutrient upwelling to
-      induce controlled algal blooms for carbon sequestration.
-    </p>
-    <ul>
-      <li>Inspired by Ocean Spiral concept</li>
-      <li>Application: Climate mitigation</li>
-    </ul>
+    <strong>PFAS Wastewater Treatment</strong>
+    <p>Microalgae-based removal of persistent pollutants.</p>
   </div>
 
 </section>
-#research {
-  background: #f8fafc;
-  padding: 60px 20px;
-}
 
-.research-item {
-  background: white;
-  margin: 20px auto;
-  padding: 25px;
-  max-width: 800px;
-  border-left: 5px solid #38bdf8;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
+<section id="publications">
+  <h2>Publications</h2>
 
-.research-item h3 {
-  margin-bottom: 10px;
-  color: #0f172a;
-}
+  <div class="pub-item">
+    <div class="pub-title">
+      Microbial Volatile 3-Methyl-1-Butanol Enhances Stomatal Closure
+    </div>
+    <div>Physiologia Plantarum (2025)</div>
+  </div>
 
-.research-item ul {
-  margin-top: 10px;
-}
+  <div class="pub-item">
+    <div class="pub-title">
+      Autophagy in Microbial Volatile Pollutant Response
+    </div>
+    <div>Environmental Pollution (2025)</div>
+  </div>
+
+</section>
+
+<!-- GRAPH SECTION -->
+<section id="data">
+  <h2>Experimental Data</h2>
+  <p>Example: Microalgae Growth Curve (OD680)</p>
+
+  <canvas id="growthChart"></canvas>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<footer>
+  © 2026 Trinh Truong
+</footer>
+
+<script>
+  const ctx = document.getElementById('growthChart').getContext('2d');
+
+  const growthChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Day 0', 'Day 2', 'Day 4', 'Day 6', 'Day 8'],
+      datasets: [{
+        label: 'OD680',
+        data: [0.1, 0.3, 0.8, 1.5, 2.0],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
