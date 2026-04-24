@@ -1,232 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Trinh Truong | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinh Truong, PhD | Postdoctoral Research Fellow</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f179a;
-      text-align: center;
-    }
+<!-- Google font (clean academic style) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 60px 20px;
-    }
+<style>
+:root {
+  --green-dark: #166534;
+  --green-main: #15803d;
+  --green-light: #22c55e;
+  --text-dark: #0f172a;
+  --bg-light: #f8fafc;
+}
 
-    header h1 {
-      margin-bottom: 10px;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      background: #1e293b;
-      padding: 15px;
-    }
+/* HEADER */
+header {
+  background: var(--green-dark);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.subtitle {
+  font-weight: 600;
+  margin-top: 10px;
+}
 
-    h2 {
-      margin-bottom: 20px;
-    }
+.desc {
+  max-width: 700px;
+  margin: 15px auto;
+}
 
-   
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: white;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
 
-    .skill {
-      background: #38bdf8;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 20px;
-    }
+nav a {
+  text-decoration: none;
+  color: var(--green-dark);
+  font-weight: 600;
+}
 
-    footer {
-      background: #0f172a;
-      color: white;
-      padding: 30px;
-    }
+/* SECTION */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    button {
-      background: #38bdf8;
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+h2 {
+  border-left: 6px solid var(--green-main);
+  padding-left: 10px;
+}
 
-    button:hover {
-      background: #0ea5e9;
-    }
-  </style>
+/* CARDS */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background: var(--green-main);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--green-main);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+}
+
+/* PUBLICATIONS */
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-journal {
+  font-size: 14px;
+  color: gray;
+}
+
+/* GRAPH */
+canvas {
+  margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--green-dark);
+  color: white;
+}
+</style>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
 <header>
   <h1>Trinh Truong</h1>
-  <p>AI-Driven Microalgae Systems | Carbon Capture | Wastewater Treatment</p>
-  <p>
-    Developing AI-controlled microalgae systems for CO₂ sequestration,
-    wastewater treatment, and sustainable bioresource production.
-  </p>
-  <button onclick="scrollToContact()">Contact Me</button>
+  <div class="subtitle">PhD | Postdoctoral Research Fellow | NCKU</div>
+  <div class="desc">
+    AI-driven microalgae systems for carbon capture, wastewater treatment,
+    and sustainable bioresource production.
+  </div>
+
+  <!-- CV -->
+  <a href="CV.pdf" class="btn" download>Download CV</a>
 </header>
 
 <nav>
   <a href="#about">About</a>
   <a href="#research">Research</a>
-  <a href="#skills">Skills</a>
   <a href="#publications">Publications</a>
+  <a href="#data">Data</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <p>
-    I am a researcher working on AI-driven microalgae systems for carbon capture,
-    wastewater treatment, and bioenergy production. My work integrates biotechnology,
-    machine learning, and environmental engineering.
+    I integrate biotechnology, plant science, and artificial intelligence to develop
+    sustainable environmental solutions, focusing on microalgae-based systems.
   </p>
 </section>
 
 <section id="research">
   <h2>Research</h2>
 
-  <div class="research-item">
-    <h3>AI-Controlled Multi-Species Microalgae System</h3>
-    <p>
-      Developing a machine learning-driven framework to optimize species composition
-      and environmental parameters for enhanced biomass productivity and CO₂ fixation.
-    </p>
-    <ul>
-     <li>Goal: Maximize carbon capture efficiency</li>
-    </ul>
+  <div class="card">
+    <strong>AI-Controlled Microalgae Systems</strong>
+    <p>Optimizing multi-species growth using machine learning models.</p>
   </div>
 
-  <div class="research-item">
-    <h3>PFAS Removal from Industrial Wastewater</h3>
-    <p>
-      Investigating microalgae-based remediation strategies for removing persistent
-      pollutants (PFAS) in semiconductor wastewater.
-    </p>
-    <ul>
-      <li>Approach: Bioadsorption + biodegradation</li>
-      <li>Application: Industrial wastewater treatment</li>
-    </ul>
+  <div class="card">
+    <strong>PFAS Wastewater Treatment</strong>
+    <p>Microalgae-based remediation for industrial wastewater.</p>
   </div>
 
-  <div class="research-item">
-    <h3>Artificial Algal Bloom System (Blue Hole Concept)</h3>
-    <p>
-      Designing a large-scale floating system that utilizes nutrient upwelling to
-      induce controlled algal blooms for carbon sequestration.
-    </p>
-    <ul>
-      <li>Concept: Ocean Spiral-inspired system</li>
-      <li>Goal: Climate change mitigation</li>
-    </ul>
+  <div class="card">
+    <strong>Artificial Algal Bloom System</strong>
+    <p>Large-scale CO₂ sequestration using engineered algal blooms.</p>
   </div>
-
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skill">R studio</div>
-    <div class="skill">Machine Learning</div>
-    <div class="skill">Microalgae Cultivation</div>
-    <div class="skill">CO₂ Sequestration</div>
-  </div>
-  </section>
-.research-item {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 800px;
-  border-left: 5px solid #166534;
-  text-align: left;
-}
- </div>
-  
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: ttttrinh@kontum.udn.vn/z11310032@ncku.edu.tw</p>
-  <p>https://www.linkedin.com/in/truong-t-tu-trinh-40635472/</p>
-<p>https://orcid.org/my-orcid?orcid=0000-0003-3603-8679<p>
-</section>
-
-<footer>
-  <p>Truong Thi Tu Trinh</p>
-</footer>
-
-
-<script>
-  function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  }
-</script>
-
-</body>
-</html>
-
 
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
 
-  <div class="pub-item">
+  <div class="card">
     <div class="pub-title">
-      Microbial Volatile 3-Methyl-1-Butanol Enhances Stomatal Closure and Salt Stress Tolerance via Ethylene and Jasmonate Pathways in Arabidopsis
+      Microbial Volatile 3-Methyl-1-Butanol Enhances Stomatal Closure
     </div>
     <div class="pub-journal">Physiologia Plantarum (2025)</div>
   </div>
 
-  <div class="pub-item">
+  <div class="card">
     <div class="pub-title">
-      Possible role of autophagy in microbial volatile pollutant-induced starch degradation and expression of hypoxia responsive genes
+      Autophagy in Microbial Volatile Pollutant Response
     </div>
     <div class="pub-journal">Environmental Pollution (2025)</div>
   </div>
 
-  <div class="pub-item">
+  <div class="card">
     <div class="pub-title">
-      Volatile Compounds Emitted by Plant Growth-Promoting Fungus Exophiala inflata (L62) Alleviate Copper and Pathogen Stress
+      Volatile Compounds from Fungus Exophiala inflata
     </div>
     <div class="pub-journal">Plant and Cell Physiology (2024)</div>
   </div>
 
-  <div class="pub-item">
-    <div class="pub-title">
-      Signaling pathways involved in microbial indoor air pollutant 3-methyl-1-butanol in the induction of stomatal closure in Arabidopsis
-    </div>
-    <div class="pub-journal">Environmental Science and Pollution Research (2024)</div>
-  </div>
+</section>
 
-  <div class="pub-item">
-    <div class="pub-title">
-      Uncovering molecular mechanisms involved in microbial volatile compounds-induced stomatal closure in Arabidopsis thaliana
-    </div>
-    <div class="pub-journal">Plant Molecular Biology (2023)</div>
-  </div>
+<section id="data">
+  <h2>Experimental Data</h2>
+  <p>Microalgae Growth Curve (OD680)</p>
 
+  <canvas id="chart"></canvas>
+</section>
 
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: ttttrinh@kontum.udn.vn / z11310032@ncku.edu.tw</p>
+  <p>
+    <a href="https://www.linkedin.com/in/truong-t-tu-trinh-40635472/">LinkedIn</a> |
+    <a href="https://orcid.org/0000-0003-3603-8679">ORCID</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Trinh Truong
+</footer>
+
+<script>
+const ctx = document.getElementById('chart');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Day 0','Day 2','Day 4','Day 6','Day 8'],
+    datasets: [{
+      label: 'OD680',
+      data: [0.1,0.4,0.9,1.6,2.1],
+      borderWidth: 2
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
